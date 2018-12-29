@@ -1,0 +1,10 @@
+type Video @model {
+  id: ID! @isUnique
+  title: String!
+  thumbnail: String!
+  url: String! @isUnique
+}
+
+query getFeaturedVideo {
+  ...Video
+}

@@ -13,10 +13,15 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "apollo-boost": "^0.1.23",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
     "koa": "^2.5.2",
-    "@nuxtjs/axios": "^5.0.0"
+    "nuxt": "^2.0.0",
+    "vue-apollo": "^3.0.0-beta.26",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",

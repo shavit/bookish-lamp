@@ -1,73 +1,51 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        ppv-clips
-      </h1>
-      <h2 class="subtitle">
-        Platform to sell videos
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+  <div>
+    <Navbar />
+    <section class="body">
+      <div class="container">
+        <div class="feed">
+          <Thumbnail/>
+          <VideoList />
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Navbar from '~/components/Navbar.vue'
+import Thumbnail from '~/components/Thumbnail.vue'
+import VideoList from '~/components/VideoList.vue'
+
+// API endpoint
+// https://api.graph.cool/simple/v1/cjq8o1jtk25q00197axtf5sm9
 
 export default {
   components: {
-    Logo
-  }
+    Navbar,
+    Thumbnail,
+    VideoList
+  },
+  data: () => ({
+    username: null
+  })
 }
 </script>
 
 <style>
-
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
 
+body {
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+}
 
 .container {
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>

@@ -1,0 +1,9 @@
+type User @model {
+  createdAt: DateTime!
+  id: ID! @isUnique
+  updatedAt: DateTime!
+}
+
+query user {
+  ...User
+}
