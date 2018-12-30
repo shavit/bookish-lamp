@@ -6,6 +6,7 @@ const mockVideo = i => ({
 })
 
 export const state = () => ({
+  comments: [{ id: 1, name: 'comment' }, { id: 2, name: 'comment' }],
   featuredVideo: {
     title: 'Video Title',
     thumbnail: 'https://img.youtube.com/vi/YbJOTdZBX1g/0.jpg',

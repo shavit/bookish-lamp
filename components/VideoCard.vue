@@ -1,7 +1,12 @@
 <template>
   <div class="VideoCard">
-    <div class="Title">
-      Video Card Title: {{ video.title }}
+    <div
+      :if="video"
+      class="Title">
+      Video Card Title: {{ video }}
+      <div>
+        <code>{{ video }}</code>
+      </div>
     </div>
   </div>
 </template>

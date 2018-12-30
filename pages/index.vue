@@ -7,6 +7,9 @@
           <Thumbnail/>
           <VideoList />
         </div>
+        <div class="sidebar">
+          <Comments />
+        </div>
       </div>
     </section>
   </div>
@@ -16,6 +19,7 @@
 import Navbar from '~/components/Navbar.vue'
 import Thumbnail from '~/components/Thumbnail.vue'
 import VideoList from '~/components/VideoList.vue'
+import Comments from '~/components/comments/Comments.vue'
 
 // API endpoint
 // https://api.graph.cool/simple/v1/cjq8o1jtk25q00197axtf5sm9
@@ -24,7 +28,8 @@ export default {
   components: {
     Navbar,
     Thumbnail,
-    VideoList
+    VideoList,
+    Comments
   },
   data: () => ({
     username: null

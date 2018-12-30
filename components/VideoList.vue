@@ -2,7 +2,7 @@
   <div class="VideoList">
     <p>{{ videos.length }} Videos</p>
     <VideoCard
-      :for="video in videos"
+      v-for="video in videos"
       :key="video.id"
       :video="video" />
   </div>
@@ -21,17 +21,12 @@ export default {
       type: Object,
       required: false,
       default: () => ({})
-    },
-    i: {
-      type: Number,
-      required: false,
-      default: () => {
-        return 0
-      }
     }
   },
-  data: () => ({
-    videos: state().videos
-  })
+  data: function() {
+    return {
+      videos: state().videos
+    }
+  }
 }
 </script>
