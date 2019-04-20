@@ -1,6 +1,6 @@
 <template>
   <div class="Comment">
-    <h4>Comment</h4>
+    <h4>Comment {{ comment.id }}</h4>
     <div class="">
       <p>{{ comment }}</p>
     </div>

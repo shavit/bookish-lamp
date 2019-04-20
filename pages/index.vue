@@ -4,7 +4,7 @@
     <section class="body">
       <div class="container">
         <div class="feed">
-          <Thumbnail/>
+          <Thumbnail :video="video" />
           <VideoList />
         </div>
         <div class="sidebar">
@@ -21,6 +21,10 @@ import Thumbnail from '~/components/Thumbnail.vue'
 import VideoList from '~/components/VideoList.vue'
 import Comments from '~/components/comments/Comments.vue'
 
+import { state } from '../store'
+
+const featuredVideo = state().featuredVideo
+
 // API endpoint
 // https://api.graph.cool/simple/v1/cjq8o1jtk25q00197axtf5sm9
 
@@ -32,7 +36,8 @@ export default {
     Comments
   },
   data: () => ({
-    username: null
+    username: null,
+    video: featuredVideo
   })
 }
 </script>

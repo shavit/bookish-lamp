@@ -1,5 +1,6 @@
 <template>
   <div class="Thumbnail">
+    <p>Thumbnail</p>
     <img
       :if="video"
       :src="video.thumbnail"
@@ -9,13 +10,12 @@
 </template>
 
 <script>
-import { state } from '../store'
-
-const featuredVideo = state().featuredVideo
-
 export default {
-  data: () => ({
-    video: featuredVideo
-  })
+  props: {
+    video: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>

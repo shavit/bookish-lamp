@@ -1,9 +1,10 @@
 <template>
   <div class="VideoCard">
+    <Thumbnail :video="video" />
     <div
       :if="video"
       class="Title">
-      Video Card Title: {{ video }}
+      <h1>{{ video.title }}</h1>
       <div>
         <code>{{ video }}</code>
       </div>
@@ -12,6 +13,8 @@
 </template>
 
 <script>
+import Thumbnail from '~/components/Thumbnail'
+
 export default {
   props: {
     video: {
