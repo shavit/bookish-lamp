@@ -2,7 +2,7 @@
   <div class="flex items-center justify-between flex-wrap bg-teal p-6">
     <div class="">
       <nav class="">
-        <a href="/">Logo</a>
+        <a href="/">Videos</a>
         <a href="/">Following</a>
         <a href="/">Browse</a>
         <a href="/">Promo 1</a>
@@ -12,7 +12,7 @@
         <a href="/">More</a>
       </div>
       <div class="nav-search">
-        <input type="text">
+        <input type="search">
       </div>
     </div>
     <div class="account">
