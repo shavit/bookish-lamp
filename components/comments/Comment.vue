@@ -1,8 +1,7 @@
 <template>
   <div class="Comment">
-    <h4>Comment {{ comment.id }}</h4>
     <div class="">
-      <p>{{ comment }}</p>
+      <p>{{ comment.body }}</p>
     </div>
   </div>
 </template>
