@@ -1,15 +1,17 @@
 <template>
   <div class="thumbnail">
     <p>Thumbnail</p>
-    <img
-      :if="video"
-      :src="video.thumbnail"
-      alt="video.title">
-    <p
-      v-if="video.title"
-      class="overlay-title">
-      {{ video.title }}
-    </p>
+    <NuxtLink :to="videoLink(video)">
+      <img
+        :if="video"
+        :src="video.thumbnail"
+        alt="video.title">
+      <p
+        v-if="video.title"
+        class="overlay-title">
+        {{ video.title }}
+      </p>
+    </NuxtLink>
   </div>
 </template>
 
@@ -19,6 +21,11 @@ export default {
     video: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    videoLink(video) {
+      return '/watch/' + video.id
     }
   }
 }

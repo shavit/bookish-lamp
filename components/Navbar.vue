@@ -1,6 +1,6 @@
 <template>
   <div>
-    Videos
+    <NuxtLink to="/">Videos</NuxtLink>
     <NavbarSearch />
   </div>
 </template>

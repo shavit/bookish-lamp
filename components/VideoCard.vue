@@ -4,10 +4,9 @@
     <div
       :if="video"
       class="Title">
-      <h1>{{ video.title }}</h1>
-      <div>
-        <code>{{ video }}</code>
-      </div>
+      <h1>
+        <NuxtLink :to="videoLink(video)">{{ video.title }}</NuxtLink>
+      </h1>
     </div>
   </div>
 </template>
@@ -16,10 +15,18 @@
 import Thumbnail from '~/components/Thumbnail'
 
 export default {
+  components: {
+    Thumbnail
+  },
   props: {
     video: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    videoLink(video) {
+      return '/watch/' + video.id
     }
   }
 }
